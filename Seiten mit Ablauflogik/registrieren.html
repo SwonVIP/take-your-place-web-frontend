@@ -1,10 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <meta name="description" content="">
+       <meta name="author" content="">
+       <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+
+       <title>Signin Template for Bootstrap</title>
+       <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="../MIMEs/Bootstrap_framework/bootstrap.min.css">
+    <link rel="stylesheet" href="../MIMEs/Custom_CSS/register.css">
+     </head>
+ <header>
+        <link rel="stylesheet" href="../MIMEs/Custom_CSS/navbar.css">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color">
+            <a class="navbar-brand" href="index.htm">Take your place</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.htm">Über<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preise.htm">Preise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.htm">Support</a>
+                    </li>
+                </ul>
+                         <form class="form-inline mt-2 mt-md-0">
+                           <a class="btn btn-dark my-2 my-sm-0" href="login.htm" type="submit">Anmelden</a>
+                         </form>
+            </div>
+        </nav>
+</header>
+ <body>
+
+<%= status %>
+   <div class="container">
+     <form class="form-signin">
+           <h2 class="form-signin-heading">Registrieren</h2>
+    <fieldset id="inputKategorie" name="inputKategorie" required="">
+                 <input type="radio" name="inputKategorie" value="<%=application->C_BNTZ_ANANLEGEN%>">Auftragnehmer</label>
+        <input type="radio" name="inputKategorie" value="<%=application->C_BNTZ_AGANLEGEN%>">Auftraggeber</label>
+        <input type="radio" name="inputKategorie" value="<%=application->C_BNTZ_BEIDESANLEGEN%>">Auftragnehmer und Auftraggeber</label>
+    </fieldset>
+
+    <!-- //Für Auftraggeber -->
+    <fieldset id="inputTarif" name="inputTarif" required="">
+                 <input type="radio" name="inputTarif" value="<%= tarif1-id %>"><%= tarif1-name %> - <%= tarif1-preis %>€</label>
+        <input type="radio" name="inputTarif" value="<%= tarif2-id %>"><%= tarif2-name %> - <%= tarif2-preis %>€</label>
+        <input type="radio" name="inputTarif" value="<%= tarif3-id %>"><%= tarif3-name %> - <%= tarif3-preis %>€</label>
+
+        <!-- //Für Auftragnehmer und Auftraggeber -->
+                 <input type="radio" name="inputTarif" value="<%= tarif4-id %>"><%= tarif4-name %> - <%= tarif4-preis %>€</label>
+        <input type="radio" name="inputTarif" value="<%= tarif5-id %>"><%= tarif5-name %> - <%= tarif5-preis %>€</label>
+        <input type="radio" name="inputTarif" value="<%= tarif6-id %>"><%= tarif6-name %> - <%= tarif6-preis %>€</label>
+
+        <!-- //Für Auftragnehmer -> 150 € anzeigen -->
+
+
+    </fieldset>
+    <label for="inputName" class="sr-only">Name</label>
+           <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Name" required="" autofocus="">
+    <label for="inputPLZ" class="sr-only">Postleitzahl</label>
+           <input type="text" id="inputPLZ" name="inputPLZ" class="form-control" placeholder="PLZ" required="" autofocus="">
+           <label for="inputOrt" class="sr-only">Ort</label>
+           <input type="text" id="inputOrt" name="inputOrt" class="form-control" placeholder="Ort" required="" autofocus="">
+    <label for="inputStrasse" class="sr-only">Straße, Hausnummer</label>
+           <input type="text" id="inputStrasse" name="inputStrasse" class="form-control" placeholder="Straße" required="" autofocus="">
+    <label for="inputEmail" class="sr-only">Email</label>
+           <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
+           <label for="inputPassword" class="sr-only">Passwort</label>
+           <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Passwort" required="">
+    <label for="inputAGB" class="sr-only">Passwort</label>
+           <input type="checkbox" id="inputAGB" class="form-control" placeholder="Bitte AGB Bestätigen" required=""><p> AGBs bestätigen </p>
+           <input class="btn btn-lg btn-primary btn-block" type="submit" name="OnInputProcessing(registrieren)" value="Registrieren">
+         </form>
+</div>
+<!-- FOOTER -->
+     <footer class="container">
+           <p class="float-right"><a href="#">Nach oben</a></p>
+           <p class="center">&copy; 2017 Take your place GmbH & Co. KG &middot; <a href="#">Impressum</a> &middot; <a href="#">Datenschutz</a> &middot; <a href="#">AGB</a>&middot; <a href="#">Kontakt</a></p>
+         </footer>
 </body>
 </html>
