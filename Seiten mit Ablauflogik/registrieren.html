@@ -41,7 +41,6 @@
  <body>
 
 <!--<%= status %>-->
-   <div class="container">
      <form class="form-signin">
            <h2 class="form-signin-heading">Registrieren</h2>
     <fieldset id="inputKategorie" name="inputKategorie" required="">
@@ -50,20 +49,99 @@
         <input type="radio" name="inputKategorie" value="<%=application->C_BNTZ_BEIDESANLEGEN%>">Auftragnehmer und Auftraggeber</label>
     </fieldset>
 
+    <h3>Lizenzmodell</h3>
     <!-- //Für Auftraggeber -->
+
     <fieldset id="inputTarif" name="inputTarif" required="">
-                 <input type="radio" name="inputTarif" value="<%= tarif1-id %>">Gold - 1500.00 €</label>
-        <input type="radio" name="inputTarif" value="<%= tarif2-id %>">Silber - 1000.00 €</label>
-        <input type="radio" name="inputTarif" value="<%= tarif3-id %>">Bronze - 500.00 €</label>
+        <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="../MIMEs/Images/gold.png" alt="Card image cap">
+            <div class="card-body">
+
+               <h4 class="card-title">Card title</h4>
+                <p><ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul></p>
+                <input type="radio" name="inputTarif" value="<%= tarif1-id %>">Gold - 1500.00 €</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="../MIMEs/Images/silver.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p><ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul></p>
+                <input type="radio" name="inputTarif" value="<%= tarif2-id %>">Silber - 1000.00 €</label>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="../MIMEs/Images/bronze.png" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p><ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul></p>
+                <input type="radio" name="inputTarif" value="<%= tarif3-id %>">Bronze - 500.00 €</label>
+            </div>
+            </div>
+        </div>
 
         <!-- //Für Auftragnehmer und Auftraggeber -->
-                 <input type="radio" name="inputTarif" value="<%= tarif4-id %>">Gold+ - 2500.00 €</label>
-        <input type="radio" name="inputTarif" value="<%= tarif5-id %>">Silber+ - 2000.00 € </label>
-        <input type="radio" name="inputTarif" value="<%= tarif6-id %>">ronze+ - 1500.00 €</label>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="../MIMEs/Images/gold.png" alt="Card image cap">
+                <div class="card-body">
+
+                    <h4 class="card-title">Card title</h4>
+                    <p><ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul></p>
+                    <input type="radio" name="inputTarif" value="<%= tarif4-id %>">Gold+ - 2500.00 €</label>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="../MIMEs/Images/silver.png" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p><ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul></p>
+                    <input type="radio" name="inputTarif" value="<%= tarif5-id %>">Silber+ - 2000.00 € </label>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img-top" src="../MIMEs/Images/bronze.png" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Card title</h4>
+                    <p><ul>
+                    <li>Feature 1</li>
+                    <li>Feature 2</li>
+                    <li>Feature 3</li>
+                </ul></p>
+                    <input type="radio" name="inputTarif" value="<%= tarif6-id %>">ronze+ - 1500.00 €</label>
+                </div>
+            </div>
+
+        </div>
 
         <!-- //Für Auftragnehmer -> 150 € anzeigen -->
 
-
+    <h3>Kontaktinformationen</h3>
     </fieldset>
     <label for="inputName" class="sr-only">Name</label>
            <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Name" required="" autofocus="">
@@ -81,7 +159,6 @@
            <input type="checkbox" id="inputAGB" class="form-control" placeholder="Bitte AGB Bestätigen" required=""><p> AGBs bestätigen </p>
            <input class="btn btn-lg btn-primary btn-block" type="submit" name="OnInputProcessing(registrieren)" value="Registrieren">
          </form>
-</div>
 <!-- FOOTER -->
      <footer class="container">
            <p class="float-right"><a href="#">Nach oben</a></p>
